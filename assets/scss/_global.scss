@@ -1,4 +1,5 @@
-@use "../../node_modules/@voyagerstudio/saturnfive/index"as *;
+@forward "../../node_modules/@voyagerstudio/saturnfive/index";
+@use "../../node_modules/@voyagerstudio/saturnfive/index" as *;
 
 /* ---- Global               --------------- */
 html,

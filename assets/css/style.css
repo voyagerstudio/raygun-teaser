@@ -63,7 +63,7 @@ body {
   background-color: rgba(250, 252, 252, 0.96);
   align-items: center;
   display: flex;
-  height: 5rem;
+  min-height: 5rem;
   justify-content: center;
   margin-bottom: -180px;
   position: relative;
@@ -83,6 +83,12 @@ body {
   width: 100%;
   max-width: 75rem;
 }
+@media screen and (max-width: 1024px) {
+  .MainHeader__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .MainHeader__logo {
   font-size: 1.125rem;
@@ -92,6 +98,16 @@ body {
   font-style: normal;
   text-transform: uppercase;
   display: block;
+}
+@media screen and (max-width: 1024px) {
+  .MainHeader__logo {
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .MainHeader__logo {
+    margin-left: 0;
+  }
 }
 
 .MainHeader__logo-link {
@@ -127,9 +143,20 @@ body {
   display: flex;
   padding-right: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .MainHeader__nav-list {
+    flex-direction: column;
+    display: none;
+  }
+}
 
 .MainHeader__nav-item + .MainHeader__nav-item {
   margin-left: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .MainHeader__nav-item + .MainHeader__nav-item {
+    margin-left: 0;
+  }
 }
 
 .MainHeader__nav-link {
@@ -168,6 +195,128 @@ body {
 .MainHeader__nav-link[disabled]:focus:after, .MainHeader__nav-link[disabled]:hover:after {
   opacity: 0;
   transform: scaleX(0);
+}
+
+.code-of-conduct {
+  max-width: 75rem;
+  margin: 25rem auto 10rem;
+  width: 100%;
+}
+@media screen and (max-width: 1440px) {
+  .code-of-conduct {
+    margin-top: 12.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.code-of-conduct h2 {
+  font-size: 5.875rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  font-style: normal;
+  color: #c2931c;
+  margin: 0;
+}
+@media screen and (max-width: 1024px) {
+  .code-of-conduct h2 {
+    font-size: 2.875rem;
+  }
+}
+
+.code-of-conduct .coc__updated-msg {
+  font-size: 1.25rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  font-style: normal;
+  margin-bottom: 7.5rem;
+  opacity: 0.6;
+}
+@media screen and (max-width: 1024px) {
+  .code-of-conduct .coc__updated-msg {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.code-of-conduct p {
+  font-size: 1.125rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  max-width: 50rem;
+  color: #434242;
+}
+
+p.coc__lead {
+  font-size: 1.4375rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: normal;
+}
+@media screen and (max-width: 1024px) {
+  p.coc__lead {
+    font-size: 1.25rem;
+  }
+}
+
+.code-of-conduct h3 {
+  font-size: 1.4375rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  font-style: normal;
+  margin: 2.5rem 0 0;
+  color: steelblue;
+}
+
+.code-of-conduct h4 {
+  font-size: 1rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  font-style: normal;
+  margin: 3rem 0 0;
+  color: steelblue;
+}
+
+.code-of-conduct ul {
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+.code-of-conduct li {
+  font-size: 1.125rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  width: 100%;
+  max-width: 50rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  color: #282727;
+}
+.code-of-conduct li:before {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  left: -1.25rem;
+  top: 0.75rem;
+  content: "";
+  border: 0.125rem solid goldenrod;
+  border-radius: 50%;
+}
+
+.code-of-conduct a {
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.125rem solid #c6baa6;
 }
 
 /*# sourceMappingURL=style.css.map */
