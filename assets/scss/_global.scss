@@ -1,0 +1,113 @@
+@use "../../node_modules/@voyagerstudio/saturnfive/index"as *;
+
+/* ---- Global               --------------- */
+html,
+body {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+[disabled],
+[aria-disabled="true"] {
+  @include disable-text-select;
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+// Hiding Elements
+[hidden] {
+  display: none;
+}
+
+[aria-hidden="true"] {
+  visibility: hidden;
+}
+
+@mixin blend-shadow($mode: 'light') {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    @if $mode == 'light' {
+        &:before {
+            box-shadow: inset 100px -70px 100px #F1F2F5, inset -100px -66px 100px #F1F2F5, inset 0px -300px 250px #F1F2F5, inset 100px -60px 250px #F1F2F5, inset -100px -60px 250px #F1F2F5;  
+        }
+    } @else if $mode == 'dark' {
+        &:before {
+            box-shadow: inset 100px -70px 100px #313132, inset -100px -66px 100px #313132, inset 0px -300px 250px #313132, inset 100px -60px 250px #313132, inset -100px -60px 250px #313132;
+        }
+    }
+}
+
+@mixin ricepaper($type:light,$intensity:4) {
+  
+  @if $type == 'light' {
+    @supports (-webkit-backdrop-filter: blur()) {
+    // & {
+        -webkit-backdrop-filter: saturate(360%) blur(#{set-size($intensity)});
+        background-color: get-color(soft-white, 0, 80);
+    // }
+  }
+  
+  background-color: get-color(soft-white, 0, 96);
+  }
+  
+  @if $type == 'medium' {
+    @supports (-webkit-backdrop-filter: blur()) {
+    // & {
+      -webkit-backdrop-filter: saturate(360%) blur(#{set-size($intensity)});
+      background-color: get-color(grey, 0, 80);
+    // }
+  }
+  
+  background-color: get-color(grey, 0, 97);
+  }
+  
+  @if $type == 'dark' {
+    @supports (-webkit-backdrop-filter: blur()) {
+    // & {
+        -webkit-backdrop-filter: saturate(360%) blur(#{set-size($intensity)});
+        background-color: get-color(soft-black, 0, 85);
+    // }
+  }
+  
+  background-color: get-color(soft-black, 0, 93);
+  }
+  
+}
+
+disabled,
+[disabled],
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.25;
+  @include disable-text-select;
+}
+
+body {
+  background-color: #F1F2F5;
+}
+
+.profile__content {
+  display: flex;
+  margin-top: set-size(20);
+  padding: 0 set-size(10);
+}

@@ -8,7 +8,8 @@
     "@voyagerstudio/saturnfive": "3.0.0-beta.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "sass --watch assets/scss/style.scss:assets/css/style.css"
   },
   "repository": {
     "type": "git",
