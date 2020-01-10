@@ -1,0 +1,94 @@
+@use "global"as *;
+
+.landing {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    @include max-width-viewport(sm) {
+        align-items: flex-start;
+        padding-top: set-size(10);
+    }
+}
+
+
+.masthead {
+    display: flex;
+    margin-bottom: set-size(12);
+
+    @include max-width-viewport(sm) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img {
+        width: set-size(50);
+        flex-basis: auto;
+        align-self: center;
+        opacity: 0.2;
+
+        @include max-width-viewport(sm) {
+            width: set-size(30);
+            margin: 0;
+        }
+    }
+}
+
+.masthead__content h1 {
+    @include set-type(display, 18, bold);
+    margin: set-size(6) 0 0;
+
+    @include max-width-viewport(sm) {
+        @include set-type-size(13);
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+
+.masthead__content p {
+    @include set-type(display, 8, demi-bold);
+    margin: set-size(2) 0;
+    opacity: 0.5;
+
+    @include max-width-viewport(sm) {
+        @include set-type-size(6);
+        text-align: center;
+    }
+}
+
+.landing-copy {
+    @include set-type(display, 10, medium);
+    @include set-type-line-height(xs);
+    margin: set-size(3) 0;
+    margin-left: set-size(50);
+
+    @include max-width-viewport(sm) {
+        margin-left: 0;
+        padding: 0 set-size(4);
+        @include set-type-size(8);
+    }
+
+    &:nth-of-type(2) {
+        margin-bottom: set-size(50);
+
+        @include max-width-viewport(sm) {
+            margin-bottom: set-size(20);
+        }
+    }
+}
+
+.landing-copy a {
+    color: get-color(soft-black);
+    text-decoration-color: get-color(orange, 0, 50);
+    text-decoration-thickness: 2px;
+    
+    &:hover,
+    &:focus {
+        color: get-color(orange);
+        text-decoration-color: get-color(orange, 0, 80);
+    }
+}

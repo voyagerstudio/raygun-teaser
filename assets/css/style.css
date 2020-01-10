@@ -197,6 +197,112 @@ body {
   transform: scaleX(0);
 }
 
+.landing {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .landing {
+    align-items: flex-start;
+    padding-top: 2.5rem;
+  }
+}
+
+.masthead {
+  display: flex;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .masthead {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.masthead img {
+  width: 12.5rem;
+  flex-basis: auto;
+  align-self: center;
+  opacity: 0.2;
+}
+@media screen and (max-width: 768px) {
+  .masthead img {
+    width: 7.5rem;
+    margin: 0;
+  }
+}
+
+.masthead__content h1 {
+  font-size: 4.625rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  font-style: normal;
+  margin: 1.5rem 0 0;
+}
+@media screen and (max-width: 768px) {
+  .masthead__content h1 {
+    font-size: 2.5625rem;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.masthead__content p {
+  font-size: 1.4375rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  font-style: normal;
+  margin: 0.5rem 0;
+  opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+  .masthead__content p {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+.landing-copy {
+  font-size: 1.8125rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: normal;
+  line-height: 1.2;
+  margin: 0.75rem 0;
+  margin-left: 12.5rem;
+}
+@media screen and (max-width: 768px) {
+  .landing-copy {
+    margin-left: 0;
+    padding: 0 1rem;
+    font-size: 1.4375rem;
+  }
+}
+.landing-copy:nth-of-type(2) {
+  margin-bottom: 12.5rem;
+}
+@media screen and (max-width: 768px) {
+  .landing-copy:nth-of-type(2) {
+    margin-bottom: 5rem;
+  }
+}
+
+.landing-copy a {
+  color: #0d0c0c;
+  text-decoration-color: rgba(255, 165, 0, 0.5);
+  text-decoration-thickness: 2px;
+}
+.landing-copy a:hover, .landing-copy a:focus {
+  color: orange;
+  text-decoration-color: rgba(255, 165, 0, 0.8);
+}
+
 .code-of-conduct {
   max-width: 75rem;
   margin: 25rem auto 10rem;
@@ -215,7 +321,7 @@ body {
   font-weight: 700;
   line-height: 1.6;
   font-style: normal;
-  color: #c2931c;
+  color: orange;
   margin: 0;
 }
 @media screen and (max-width: 1024px) {
@@ -306,17 +412,21 @@ p.coc__lead {
   height: 0.5rem;
   position: absolute;
   left: -1.25rem;
-  top: 0.75rem;
+  top: 0.5rem;
   content: "";
-  border: 0.125rem solid goldenrod;
+  border: 0.125rem solid orange;
   border-radius: 50%;
 }
 
 .code-of-conduct a {
   color: black;
   display: inline-block;
-  text-decoration: none;
-  border-bottom: 0.125rem solid #c6baa6;
+  text-decoration: underline;
+  text-decoration-color: #ffc355;
+  text-decoration-thickness: 2px;
+}
+.code-of-conduct a:hover, .code-of-conduct a:focus {
+  text-decoration-color: orange;
 }
 
 /*# sourceMappingURL=style.css.map */
