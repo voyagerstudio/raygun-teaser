@@ -1,0 +1,23 @@
+{
+  "name": "raygun-teaser",
+  "version": "1.0.0",
+  "description": "temporary simple website for presenting the Ray Gun Club community &amp; project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@voyagerstudio/saturnfive": "3.0.0-beta.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voyagerstudio/raygun-teaser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voyagerstudio/raygun-teaser/issues"
+  },
+  "homepage": "https://github.com/voyagerstudio/raygun-teaser#readme"
+}
